@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+*{
+    margin: 0 ;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Montserrat";
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(200, 100%, 85%); 
+}
+
+.container{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid hsl(200, 100%, 10%);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: hsl(200, 100%, 10%);
+    transition: all 0.5s ease;
+}
+
+.searchBar{
+    width: 250px;
+    border: 2px solid hsl(200, 100%, 10%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 20px;
+    transform: translateY(165px);
+    transition: all 0.5s ease;
+}
+
+input{
+    background: transparent;
+    outline: none;
+    border: none;
+    color: hsl(200, 100%, 10%);
+    text-transform: uppercase;
+}
+
+input::placeholder{
+    color: hsl(200, 100%, 10%);
+}
+
+.bx-search , .bxs-map{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.infos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.temp{
+    padding: 10px 0;
+    transition: all 0.3s;
+}
+
+.infos-img{
+    width: 230px;
+    height: 230px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.extraInfos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    margin-top: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.windspeed , .humidity{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 110px;
+    height: 50px;
+}
+
+.bx-wind , .bx-water{
+    font-size: 35px;
+}
+
+
+@media only screen and (max-width: 510px) {
+    .container{
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 465px) {
+    .container{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .container{
+        width: 350px;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    .container{
+        width: 270px;
+    }
+}
